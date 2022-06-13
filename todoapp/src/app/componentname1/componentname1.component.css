@@ -1,0 +1,12 @@
+#banner{
+  background-color: deepskyblue;
+}
+
+#bannertext
+{
+  text-align: center;
+font-size: 5rem;
+font-weight: bold;
+color: white;
+font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}

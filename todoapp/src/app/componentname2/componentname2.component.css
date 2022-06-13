@@ -1,0 +1,23 @@
+#addBtn
+{
+  width: 250px;
+  height: 50px;
+  margin-right: 5px;
+  font-weight: bold;
+  font-size: 25px;
+  background-color: deepskyblue;
+  color: white;
+}
+
+#addBtn:hover{
+  background-color: white;
+  color: deepskyblue;
+  border: 1px solid deepskyblue;
+}
+
+#addText{
+  height: 50px;
+  margin-left: 5px;
+  color: deepskyblue;
+  border: 1px solid deepskyblue;
+}

@@ -1,0 +1,6 @@
+<div class="input-group mb-3">
+  <input #inputvalue type="text" id="addText" class="form-control" placeholder="Add list">
+  <div class="input-group-append">
+    <input type="button" class="input-group-text"  id="addBtn" (click)="additem(inputvalue.value); inputvalue.value='' " value="Add" />
+  </div>
+</div>

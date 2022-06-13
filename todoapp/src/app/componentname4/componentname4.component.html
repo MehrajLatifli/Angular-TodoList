@@ -1,0 +1,81 @@
+<div class="float-container">
+
+<div id="tablediv" class="float-child table-responsive">
+
+  <table id="table" class="table">
+    <thead>
+      <tr class="text-light">
+        <th>Id</th>
+        <th>Description</th>
+        <th>Action</th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody #tbody_>
+      <tr id="trid" #tr_ *ngFor="let item of getTableitems(); let i=index;" (click)="changeTableRow(tbody_,tr_)" class="text-light">
+
+        <td #tdId>
+          {{item.Id}}
+        </td>
+
+        <td #tdDescription>
+          {{item.Description}}
+        </td>
+
+        <ng-template #noTemplate>
+          <td style="background-color:red;"> No
+          </td>
+        </ng-template>
+
+        <ng-template #yesTemplate>
+          <td style="background:purple;"> Yes
+          </td>
+        </ng-template>
+
+        <td id="yesno"  *ngIf="item.Action; then yesTemplate else noTemplate"> Yes
+        </td>
+
+        <td>
+          <input  id="yesnocheck" type="checkbox" [(ngModel)]="item.Action">
+        </td>
+
+
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<div class="float-child2 registration-form">
+  <form>
+    <div class="form-group">
+      <h1>Description</h1>
+    </div>
+    <br>
+
+    <div class="form-group">
+      <input #UpdateDescription type="textbox" id="DescriptionId" type="text" placeholder="Description">
+    </div>
+
+    <br/>
+
+
+    <div class="form-group">
+      Action: &nbsp;
+      <label id="actioncheckLabel" for="actioncheck"> &nbsp;</label>
+        <input #UpdateAction name="actioncheck" id="actioncheck" type="checkbox" value="">
+        <div id="refreshdiv" class="form-group">
+
+          <br>
+
+          <input id="inputbtn" type="button" class="btn btn-warning" value="Update" (click)="updateitem(UpdateDescription.value, UpdateAction.checked)">
+
+        </div>
+      </div>
+
+
+    <br/>
+
+  </form>
+</div>
+
+</div>
